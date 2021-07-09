@@ -20,21 +20,20 @@ i = 0
 split = 25
 
 while True:
-    rando = float(random.randint(0,100)/100.0)
-    now = time.strftime("%Y %d %b %H:%M:%S +0000");
+    rando = float(random.randint(0, 100)/100.0)
+    now = time.strftime("%Y %d %b %H:%M:%S +0000")
 
     if i > 0 and i % split == 0:
-        print "\nfinished indexing at {0}".format(now)
-        print OMGBUSY.format(i, i + (split - 1))
-        time.sleep( rando )
-        print "\nstarting indexing at {0}".format(now)
+        print("\nfinished indexing at {0}".format(now))
+        print(OMGBUSY.format(i, i + (split - 1)))
+        time.sleep(rando)
+        print("\nstarting indexing at {0}".format(now))
 
     if i == 0:
-        print "\nstarting indexing at {0}".format(now)
-        print OMGBUSY.format(i, i + (split - 1))
-        time.sleep( rando )
+        print("\nstarting indexing at {0}".format(now))
+        print(OMGBUSY.format(i, i + (split - 1)))
+        time.sleep(rando)
 
-    time.sleep( rando )
-    print ">> execute: seeding index {0}".format(i)
+    time.sleep(rando)
+    print(">> execute: seeding index {0}".format(now))
     i += 1
-
